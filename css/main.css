@@ -1,0 +1,172 @@
+body{
+    padding: 0%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    color: #EB6440;
+    text-decoration: none;
+}
+#header{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #EFF5F5;
+    color: #EB6440;
+}
+#links{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav, #linksextra{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+#links a{
+    text-decoration: none;
+    color: #EB6440;
+}
+#linksextra button{
+    width: 70px;
+    padding: 10px 5px;
+}
+.hamburger{
+    display: none;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance:  none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #EB6440;
+    border-radius: 6px;
+    z-index: 1;
+    transform-origin: 0 0 ;
+    transition: 0.4s;
+}
+ .hamburger:hover span:nth-child(2){
+    transform: translateX(10px);
+    background-color: #497174;
+ }
+
+ .hamburger.is-active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+ }
+ .hamburger.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+ }
+ .hamburger.is-active span:nth-child(3){
+    transform: translate(-3px, 3px) rotate(-45deg);
+ }
+
+.hamburger.is-active:hover span{
+    background-color: #497174;
+}
+
+
+.pagelanding{
+    margin-top: 80px;
+    width: 95%;
+    height: 500px;
+    align-self: center;
+    background-image: url("../media/images/african-american-man-with-colorful-paper-bags-isolated-yellow-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 5% 7%;
+    /* align-items: center; */
+}
+
+
+.image{
+    justify-content: left;
+}
+
+.image img{
+    width: 45%;
+    height: 80%;
+    min-width: 300px;
+
+}
+h1{
+    color: #497174;
+}
+
+.categories {
+    border-radius: 10px;
+    padding:0px 20px;
+    border: 1px #D6E4E5 solid;
+    width: fit-content;
+    background-color: #D6E4E5;
+}
+
+#categorieshere{
+    display: flex;
+    margin: -40px;
+    align-self: center;
+    justify-content: space-evenly;
+    
+}
+
+.catname1{
+    padding: 0 20px;
+    background-color: #497174;
+    color:#D6E4E5;
+    width: fit-content;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+.tabletimage{
+    width:  200px;
+    height: 220px;
+    margin-top: 50px;
+}
+
+.tabletimage img{
+    width: 100%;
+    height: 100%;
+}
+
+.bigcont{
+    padding: 10px 70px;
+}
+
+@media (max-width : 500px) {
+    .hamburger{
+        display: block;
+    }
+    #links{
+        display: none;
+    }
+    .pagelanding{
+        max-height: 300px;
+    }
+}
