@@ -15,5 +15,6 @@ let getList = async()=>{
 }
 
 getList().then( (data)=>{
-    console.log(data);
+   data.map(product => getProduct(product, container))
+    
 })
